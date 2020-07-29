@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {Route, Link} from 'react-router-dom';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NoteListNav from '../NoteListNav/NoteListNav';
 import NotePageNav from '../NotePageNav/NotePageNav';
 import NoteListMain from '../NoteListMain/NoteListMain';
@@ -68,6 +68,7 @@ class App extends Component {
                         exact
                         key={path}
                         path={path}
+
                         component={NoteListMain}
                     />
                 ))}
@@ -83,6 +84,7 @@ class App extends Component {
             deleteNote: this.handleDeleteNote
         };
         return (
+
             <ApiContext.Provider value={value}>
                 <div className="App">
                     <nav className="App__nav">{this.renderNavRoutes()}</nav>
@@ -94,6 +96,7 @@ class App extends Component {
                     </header>
                     <main className="App__main">{this.renderMainRoutes()}</main>
                 </div>
+
             </ApiContext.Provider>
         );
     }
