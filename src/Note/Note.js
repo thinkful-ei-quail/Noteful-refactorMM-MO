@@ -2,9 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import NotefulContext from '../NotefulContext';
 import './Note.css'
 
 export default function Note(props) {
+   
   return (
     <div className='Note'>
       <h2 className='Note__title'>
@@ -28,4 +30,5 @@ export default function Note(props) {
       </div>
     </div>
   )
+  
 }
